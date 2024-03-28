@@ -1,20 +1,26 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Blank
+      App Transportes
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+  <ion-item>
+    <ion-input [(ngModel)]="km" label="Kilometragem da Corrida:" labelPlacement="floating" placeholder="Digite os Km rodados"></ion-input>
+  </ion-item>
+
+  <ion-button expand="block" (click)="Calcular()" >Calcular o preço da corrida</ion-button>
+
+  <br>
+  <ion-label>O preço total da sua corrida é: {{precofinal}}</ion-label>
+  <br>
+  <br>
+  <ion-label>O valor que o motorista recebeu foi de: {{motorista}} </ion-label>
+  <br>
+  <br>
+  <ion-label>A comissão que o app recebeu foi de: {{app}} </ion-label>
+
 </ion-content>
